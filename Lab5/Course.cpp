@@ -1,0 +1,23 @@
+#include "Course.h"
+
+#include "Professor.h"
+
+Course::Course(const std::string& name, Professor* professor)
+    : name_(name), professor_(professor) {
+}
+
+void Course::addTopic(const std::string& topic) {
+    topics_.push_back(topic);
+}
+
+const std::string& Course::getName() const {
+    return name_;
+}
+
+const std::vector<std::string>& Course::getTopics() const {
+    return topics_;
+}
+
+const Professor* Course::getProfessor() const {
+    return professor_;
+}
